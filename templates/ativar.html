@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+
+{% block conteudo %}
+<hr>
+
+<h1 class="display-6">Ativar Usuários</h1>
+<hr>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <ul class="alert alert-success">
+    {% for category, message in messages %}
+      <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+
+<form action= "{{url_for('ativar_usuario')}}" method="POST" class="form-control" required>
+    <label>Usuário</label>
+    <input class="form-control" type="text", name="usuario"         placeholder="Insira o usuário para ativação" required>
+    <button class="btn btn-primary">Ativar</button>
+
+
+</form>
+
+
+
+
+
+
+
+{% endblock conteudo %}
