@@ -1,0 +1,138 @@
+{% extends 'base.html'%}
+
+
+{% block conteudo%}
+<hr>
+<h1 class="display-6">Cadastro de Usuários</h1>
+
+<form action= "{{url_for('criar_usuario')}}" method="POST" class="form-control" required>
+
+    <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control" name="nome" id="floatingInputGrid" placeholder="Nome" value="">
+            <label for="floatingInputGrid">Nome</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" name ="genero" id="floatingSelectGrid" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="1">Masculino</option>
+              <option value="2">Feminino</option>
+              <option value="3">Não Binário</option>
+            </select>
+            <label for="floatingSelectGrid">Gênero</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control" name="apelido" id="floatingInputGrid" placeholder="" value="">
+            <label for="floatingInputGrid">Apelido</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" name="cidade" id="floatingSelectGrid" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="1">Londrina</option>
+              <option value="2">Florianópolis</option>
+              <option value="3">Joinville</option>
+            </select>
+            <label for="floatingSelectGrid">Cidade</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="number" class="form-control" name="cpf" id="floatingInputGrid" placeholder="" value="">
+            <label for="floatingInputGrid">CPF</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" name="estado" id="floatingSelectGrid" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="1">Paraná</option>
+              <option value="2">Santa Cantarina</option>
+              <option value="3"></option>
+            </select>
+            <label for="floatingSelectGrid">Estado</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="number" class="form-control" name="telefone" id="floatingInputGrid" placeholder="" value="">
+            <label for="floatingInputGrid">Telefone</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" name="nacionalidade" id="floatingSelectGrid" aria-label="Floating label select example">
+              <option selected></option>
+              <option value="1">Brasileiro</option>
+              <option value="2">Argentino</option>
+              <option value="3">Chileno</option>
+            </select>
+            <label for="floatingSelectGrid">Nacinalidade</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control" name="usuario" id="floatingInputGrid" placeholder="" value="">
+            <label for="floatingInputGrid">Usuário</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <label></label>
+            <input class="form-control" type="date", name="aniversario"         placeholder="" required>
+            <label for="floatingSelectGrid">Aniversário</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="password" class="form-control" name="senha" id="floatingInputGrid" placeholder="" value="">
+            <label for="floatingInputGrid">Senha</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" name="cnpj" id="floatingSelectGrid" aria-label="Floating label select example">
+              <option selected>05035532000188</option>
+              <option value="1">05035532000935</option>
+              <option value="2">05035532001826</option>
+              <option value="3"></option>
+            </select>
+            <label for="floatingSelectGrid">CNPJ</label>
+          </div>
+        </div>
+      </div>
+
+    
+
+
+
+
+
+
+    <button class="btn btn-primary">Enviar</button>
+
+
+</form>
+
+{% endblock conteudo %}
